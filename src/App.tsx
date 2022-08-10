@@ -28,7 +28,7 @@ const counterSlice = createSlice({
   }
 });
 
-const { inc, dec } = counterSlice.actions;
+const { inc } = counterSlice.actions;
 
 const store = configureStore({
   reducer: counterSlice.reducer,
@@ -44,7 +44,7 @@ function _App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Count: {count}
+          { `Count: ${count}`}
         </p>
         <button style={{fontSize: '32px'}} onClick={() => {
           i18n.changeLanguage(i18n.language === 'en' ? 'zh' : 'en');
